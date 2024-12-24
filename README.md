@@ -1,6 +1,5 @@
 ## Hello this is my repo for my custom made dactyl CC
 
-
 ## part notes
 
 ### Microcontroller
@@ -11,7 +10,11 @@ https://www.amazon.de/-/en/gp/product/B0CMXQWCTC/ref=ox_sc_act_image_2?smid=AE3E
 
 ### LED's
 
-Looks like we can use the amoeba-royale for PCB, which has RGB support 
+fuck rgb
+
+### Keycaps
+
+matcha set: https://www.amazon.de/-/en/gp/product/B096581229/ref=ewc_pr_img_7?smid=A111ZR18PX26NO&psc=1
 
 ### Keyswitches
 
@@ -31,6 +34,10 @@ amoeba king, same support as royal (?) but smaller footprint.
 ### RJ9 female connector box
 
 https://www.amazon.de/-/en/gp/product/B0DQ8P1GHF/ref=ox_sc_act_image_1?smid=A3TG06TXX9IODL&psc=1
+
+### RJ9 caple 
+så fucking dyrt.
+https://www.amazon.de/-/en/POPESQ%C2%AE-A3639-Telephone-Cable-Black/dp/B08R2ZRWGN?crid=2ZU2IKUIGCYTS&dib=eyJ2IjoiMSJ9.vdI6Z1P7mQvkyhM2AjbiODe7OQBQa9WOBqTtpfZBsXrHQV38cgDiLAm-p85mmhXKGVwNkgkiDdZaxJ17EucSL2vXxkLl-GCPQX7P-O49PgBCyY8VcYHwOAVeH61sDiI7nMpR_yrdcYVcyruXGlTpcxuHYm2p-BOkO1rrkQayZt_lrHR59dsb_IhiVUKJYLP5524kp-K1MiR5FgkRm7CvI8G2DasEtEO5gF_4y58R4hM.n1xiO_2tcN0BSBhZz5NuPchM7zEX-nkk7AJNBP5GdeE&dib_tag=se&keywords=rj9+1m+cable&nsdOptOutParam=true&qid=1734976997&sprefix=rj9+1m+cab%2Caps%2C95&sr=8-3
 
 
 ### reset buttons
