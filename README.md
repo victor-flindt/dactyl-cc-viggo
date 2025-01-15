@@ -28,7 +28,7 @@ Akko Rosewood Amazon x 2: https://www.amazon.de/-/en/Mechanical-Keyboard-Switche
 
 amoeba royale, have RGB led support, but draws to much power for per. key rgb for the arduino pro micro
 
-amoeba king, same support as royal (?) but smaller footprint.
+amoeba king, same support as royal (?) but smaller footprint. Uses another RGB LED which should be easier to solder if ever looking into doing per key rgb.
 
 
 ### RJ9 female connector box
