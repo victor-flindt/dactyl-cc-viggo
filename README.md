@@ -1,3 +1,5 @@
+![Final buil](images/header_image.jpg)
+
 # Dactyl-cc build guide
 
 The following is a build / process guide for building the Dactyl-cc, with a few modifications of my own.
@@ -18,22 +20,29 @@ All the 3D parts can be found in the STL folder, which contains the original dac
 
 The following are the parts you will need beside the 3D printed parts.
 
-* 2x [Arduino pro micro (knockoff)](https://www.amazon.de/-/en/gp/product/B0CMXQWCTC/ref=ox_sc_act_image_2?smid=AE3E5WPQSSR6E&psc=1)
+| Quantity  | Item                  | Link          | Notes     |
+| 2x        | arduino pro micro     |          ---: | ---:      |
+| Header    | Title                 | Here's this   |           |
+| Paragraph | Text                  | And more      |           |
 
-* keycaps, this is really up to you i went with this [set](https://www.amazon.de/-/en/gp/product/B096581229/ref=ewc_pr_img_7?smid=A111ZR18PX26NO&psc=1)
-
-* key switches, again go with whatever you want i went with [this set](https://www.amazon.de/-/en/Mechanical-Keyboard-Switches-Barebones-Rosewood/dp/B0D8KB4RPZ?crid=3QRLGPEONSGV7&dib=eyJ2IjoiMSJ9.SAopYxMDciVUuH5ivLoZ2fbS7gaT5hxprH6n2bZ0mZ8LwCdAiD-TPbOz2WjDqjGQtCb5QmFfTlsYVLJKQI3zUK3aurWk0LIUbwAcy3SX2B0DgObcqG9RbOkdfEBHNOyETx0CuDn_CFLOKsJ08UWKFHwwh9DsNfZhbDZ6VzE8TaON4axkLPJKF8EwNAK_0-CeeFR0Z2MJl73N92RrzUiprRQdTdFGN3Sq-HJY6Qi0g2Q.CXT_b_UCrlFmzYoUZBchxeKcqxGq2b7Tks5-nDLCUeA&dib_tag=se&keywords=akko+rosewood&nsdOptOutParam=true&qid=1734976848&sprefix=akko+rosewood%2Caps%2C113&sr=8-1). Just make sure you get enough for both sides.
-
-* 2x RJ9 female connector box. These are super standard and normally comes in bags of 10+. I got [this set](https://www.amazon.de/-/en/gp/product/B0DQ8P1GHF/ref=ox_sc_act_image_1?smid=A3TG06TXX9IODL&psc=1)
-* 1x RJ9 cable, again super standard i got [this](https://www.amazon.de/-/en/POPESQ%C2%AE-A3639-Telephone-Cable-Black/dp/B08R2ZRWGN?crid=2ZU2IKUIGCYTS&dib=eyJ2IjoiMSJ9.vdI6Z1P7mQvkyhM2AjbiODe7OQBQa9WOBqTtpfZBsXrHQV38cgDiLAm-p85mmhXKGVwNkgkiDdZaxJ17EucSL2vXxkLl-GCPQX7P-O49PgBCyY8VcYHwOAVeH61sDiI7nMpR_yrdcYVcyruXGlTpcxuHYm2p-BOkO1rrkQayZt_lrHR59dsb_IhiVUKJYLP5524kp-K1MiR5FgkRm7CvI8G2DasEtEO5gF_4y58R4hM.n1xiO_2tcN0BSBhZz5NuPchM7zEX-nkk7AJNBP5GdeE&dib_tag=se&keywords=rj9+1m+cable&nsdOptOutParam=true&qid=1734976997&sprefix=rj9+1m+cab%2Caps%2C95&sr=8-3)
-* 2x reset buttons, for easy access when flashing the microcontroller. This is really optional but is really nice for ease of life, get whatever buttons you want i [got these](https://www.amazon.de/-/en/gp/product/B0BQ3CKVMT/ref=ox_sc_act_image_3?smid=A2LZP99XORN4MN&psc=1)
-* 100x 1N4148 diodes. [got these](https://www.amazon.de/-/en/gp/product/B099PPQ7YN/ref=ox_sc_act_image_4?smid=A1KWICEO3X4YTG&psc=1)
-* threaded 3M inserts, [got these](https://www.amazon.de/-/en/gp/product/B0CRHMV56P/ref=ox_sc_act_image_5?smid=A1CN76T7RK0FRJ&psc=1)
-* wires (insert link)
-
-Obvisouly you will need soldering gear as well, a multimeter makes things easier as well and please for the love of god get a pair of small pliars and a wire stripper.
-
-Also you will need a USB-c to USB-a cable, for connecting the master arduino to the computer. You cannot use a USB-c to USB-c cable.
+| QUANTITY | ITEM                                | LINK                                                                                                                                                                                                                                        | NOTE                                  |
+|----------|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| 2x       | Arduino Pro Micro (knockoff)           | [Amazon Link](https://www.amazon.de/-/en/gp/product/B0CMXQWCTC/ref=ox_sc_act_image_2?smid=AE3E5WPQSSR6E&psc=1)                                                                                                                                          |                                       |
+| 68x       | Keycaps                                | [Amazon Link](https://www.amazon.de/-/en/gp/product/B096581229/ref=ewc_pr_img_7?smid=A111ZR18PX26NO&psc=1)                                                                                                                                          | Choose based on preference           |
+| 68x       | Key switches                           | [Amazon Link](https://www.amazon.de/-/en/Mechanical-Keyboard-Switches-Barebones-Rosewood/dp/B0D8KB4RPZ?crid=3QRLGPEONSGV7&dib=eyJ2IjoiMSJ9.SAopYxMDciVUuH5ivLoZ2fbS7gaT5hxprH6n2bZ0mZ8LwCdAiD-TPbOz2WjDqjGQtCb5QmFfTlsYVLJKQI3zUK3aurWk0LIUbwAcy3SX2B0DgObcqG9RbOkdfEBHNOyETx0CuDn_CFLOKsJ08UWKFHwwh9DsNfZhbDZ6VzE8TaON4axkLPJKF8EwNAK_0-CeeFR0Z2MJl73N92RrzUiprRQdTdFGN3Sq-HJY6Qi0g2Q.CXT_b_UCrlFmzYoUZBchxeKcqxGq2b7Tks5-nDLCUeA&dib_tag=se&keywords=akko+rosewood&nsdOptOutParam=true&qid=1734976848&sprefix=akko+rosewood%2Caps%2C113&sr=8-1) | Ensure enough for both sides         |
+| 2x       | RJ9 Female Connector Box               | [Amazon Link](https://www.amazon.de/-/en/gp/product/B0DQ8P1GHF/ref=ox_sc_act_image_1?smid=A3TG06TXX9IODL&psc=1)                                                                                                                                          | Comes in bags of 10+                 |
+| 1x       | RJ9 Cable                              | [Amazon Link](https://www.amazon.de/-/en/POPESQ%C2%AE-A3639-Telephone-Cable-Black/dp/B08R2ZRWGN?crid=2ZU2IKUIGCYTS&dib=eyJ2IjoiMSJ9.vdI6Z1P7mQvkyhM2AjbiODe7OQBQa9WOBqTtpfZBsXrHQV38cgDiLAm-p85mmhXKGVwNkgkiDdZaxJ17EucSL2vXxkLl-GCPQX7P-O49PgBCyY8VcYHwOAVeH61sDiI7nMpR_yrdcYVcyruXGlTpcxuHYm2p-BOkO1rrkQayZt_lrHR59dsb_IhiVUKJYLP5524kp-K1MiR5FgkRm7CvI8G2DasEtEO5gF_4y58R4hM.n1xiO_2tcN0BSBhZz5NuPchM7zEX-nkk7AJNBP5GdeE&dib_tag=se&keywords=rj9+1m+cable&nsdOptOutParam=true&qid=1734976997&sprefix=rj9+1m+cab%2Caps%2C95&sr=8-3) | Standard cable                       |
+| 2x       | Reset Buttons                          | [Amazon Link](https://www.amazon.de/-/en/gp/product/B0BQ3CKVMT/ref=ox_sc_act_image_3?smid=A2LZP99XORN4MN&psc=1)                                                                                                                                          | Optional but useful for flashing     |
+| 100x     | 1N4148 Diodes                          | [Amazon Link](https://www.amazon.de/-/en/gp/product/B099PPQ7YN/ref=ox_sc_act_image_4?smid=A1KWICEO3X4YTG&psc=1)                                                                                                                                          |                                       |
+| 1x       | Threaded 3M Inserts                    | [Amazon Link](https://www.amazon.de/-/en/gp/product/B0CRHMV56P/ref=ox_sc_act_image_5?smid=A1CN76T7RK0FRJ&psc=1)                                                                                                                                          |                                       |
+| 1x       | M3 flathead screws                    | (Insert Link)                                                                                                                                          |                                       |
+| 1x       | Wires                                  | (Insert Link)                                                                                                                                                                                                                                  |                                       |
+| -        | Soldering Gear and Multimeter          | (Insert your own gear)                                                                                                                                                                                                                           | Small pliers and wire stripper needed|
+| 1x       | USB-C to USB-A Cable                   | (Insert Link)                                                                                                                                                                                                                                   | For connecting Arduino to computer   |
+| 1x       | USB-C male to USB-C female extender    | (Insert Link)                                                                                                                                                                                                                                   | Optional if you wanna have a detachable cable   |
+| 2x       | Wrist rests                            | (Insert Link)| |
+| 1x       | Anti-slip pads                         | (Insert Link)| |
+| 1x       | Anti-slip pads                         | (Insert Link)| |
 
 ## Pre soldering
 
