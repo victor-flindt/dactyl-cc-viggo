@@ -1,6 +1,6 @@
-![Final buil](images/header_image.jpg)
-
 # Dactyl-cc build guide
+
+![Final buil](images/header_image.jpg)
 
 The following is a build / process guide for building the Dactyl-cc, with a few modifications of my own.
 
@@ -19,11 +19,6 @@ All the 3D parts can be found in the STL folder, which contains the original dac
 ## part notes
 
 The following are the parts you will need beside the 3D printed parts.
-
-| Quantity  | Item                  | Link          | Notes     |
-| 2x        | arduino pro micro     |          ---: | ---:      |
-| Header    | Title                 | Here's this   |           |
-| Paragraph | Text                  | And more      |           |
 
 | QUANTITY | ITEM                                | LINK                                                                                                                                                                                                                                        | NOTE                                  |
 |----------|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|

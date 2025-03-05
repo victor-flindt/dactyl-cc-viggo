@@ -43,8 +43,7 @@ class MainWindow(QMainWindow):
             self.file_label.setText(f'Selected file: {Path(self.fname).name}')
 
     def run_flasher(self) -> None:
-        print(self.fname)
-
+        os.system(f"avrdude -p m32u4 -c avr109 -P /dev/ttyACM0 -U flash:w:{self.fname}:i")
 def main():
     app = QApplication(sys.argv)
     
