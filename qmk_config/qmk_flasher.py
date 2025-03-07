@@ -1,3 +1,4 @@
+from PyQt5 import QtCore, QtWidgets, QtWebEngineWidgets
 from pathlib import Path
 import os
 import sys
@@ -47,9 +48,21 @@ class MainWindow(QMainWindow):
         layout.addWidget(button_widget)
 
         # Embed the web engine view and allow it to take up the remaining space
-        self.web_view = QWebEngineView(self)
+        self.web_view = QtWebEngineWidgets.QWebEngineView(self)
+        self.web_view.page().profile().downloadRequested.connect(
+            self.on_downloadRequested
+        ) 
         self.web_view.load(QUrl("https://config.qmk.fm/#/handwired/dactyl_cc/LAYOUT"))
         layout.addWidget(self.web_view)
+
+    @QtCore.pyqtSlot("QWebEngineDownloadItem*")
+    def on_downloadRequested(self, download):
+        old_path = download.url().path()  # download.path()
+        print(download.suggestedFileName())
+        path = 'qmk_config/'+download.suggestedFileName()
+        if path:
+            download.setPath(path)
+            download.accept()
 
     def showFileDialog(self):
         raw_document_path = f'{os.getcwd()}/qmk_config/'
