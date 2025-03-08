@@ -53,9 +53,48 @@ Prepare these things before you start to solder.
 
 (insert image of hooking diodes and pieces of wiring)
 
+## Wiring
+
+My experience with this build was that there are some contradicting information in regards to the wiring of this keyboad out there, i tried several, and the one that ended up working was one found in a [reddit](https://www.reddit.com/r/ErgoMechKeyboards/comments/1db3k5u/just_finished_my_first_dactylcc_build_inc_wiring/#lightbox) post.
+
+I have created a, in my mind, more simple wiring diagram, which is shown below.
+
+![wiring diagram](images/wiring_diagram.png)
+
+The wiring diagram shown is for the right keybaord, but mirror it exactly the same for the left. However please **beaware** that the wiring for the arduinos is **not** the same, note that the rows for the right side is flipped, the column placements are the same, but the row pins are switched. 
+
+## qmk_flahser tool
+
+There is a simple flasher tool included with the repo, it requires PyQt5 and AVRdude to be installed.
+
+avrdude can be installed for different OS by following the instructions in the [repo](https://github.com/avrdudes/avrdude), PyQt5 can be installed through pip.
+
+Starting the tool can be done with.
+
+`python qmk_config/qmk_flasher.py`
+
+The tool is meant to be used to make it easier to flash the keyboard and make changes, as this can be somewhat cumbersome otherwise. Opening the tool opens a window with the QMK configurator set up for the dactyl-cc.
+
+![QMK tool, which looks like shit](images/tool_screenshot.png)
+
+The embeded website can be used as the normal QMK configurator website, the json layout download and the firmware download (downloads the hex file needed to flash) button downloads directly to the qmk_config folder.
+
+(trying to figure out how to have it download and upload the json automatically)
+
+Selecting the hex file for flashing can be done through the button "Select qmk hex file.
+
+For the default layout that is shipped with this repo, the boards can be put into boot mode by tabbing the upper most right key on the right keyboard + the upper most left key on the left keyboard. Following that hit the "Flash board" and a voila, the boards should flash!
+
+### First time flashing
+
+The first time that the arduinos needs flashing the workflow will be a little different than described above, this is due to the arduinos not actually having the qmk firmware installed yet, which means we will need to manually get that on first.
+
+Though i have not tried it, the tool should be able to do this aswell, the only diffenece should be that the board needs to be put in BOOT mode by breifly shorting the GND + RST pins on the arduino. By doing so should keep the board in BOOT for roughly 8 seconds, in this time click "Flash board".
+
+The first time you will need to do the above described, on both boards.
+
 ## usefull cmds
 
 qmk compile -kb clueboard/66/rev3 -km default
 
 avrdude -p m32u4 -c avr109 -P /dev/ttyACM0 -U flash:w:/path/to/yourfirmware.hex:i
-
