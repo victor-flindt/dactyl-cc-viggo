@@ -61,7 +61,7 @@ I have created a, in my mind, more simple wiring diagram, which is shown below.
 
 ![wiring diagram](images/wiring_diagram.png)
 
-The wiring diagram shown is for the right keybaord, but mirror it exactly the same for the left. However please **beaware** that the wiring for the arduinos is **not** the same, note that the rows for the right side is flipped, the column placements are the same, but the row pins are switched. 
+The wiring diagram shown is for the left side of the keybaord, but mirror it exactly the same for the right side. However please **beaware** that the wiring for the Arduinos is **not** the same, note that the columns for the right side is flipped compared to the left, the row placements are the same, but the columns pins are switched.
 
 ## qmk_flahser tool
 
