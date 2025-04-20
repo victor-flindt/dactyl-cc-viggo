@@ -10,7 +10,7 @@ As when i was building my own i found that the necessary information was really 
 
 ## Printing the body & plates
 
-So first things first, you will need to get hold of somebody who can 3D print the main body and the backplates of the keyboard. I decided to go with and online service (insert link to JLCPCB) because i wanted to try out some fancy 3D print materials from SLA printing, however this was probably way overkill. A friend of mine who is was doing the build alongside with decided to have the print done with more tradtional PLA type print, and not only did this print go WAY faster it was also WAY cheaper. Even though the final quality of the SLA print is nicer, by a minor margin, i would probably not go with SLA print were i to do this again. It also turned out that the material itself posed some problems since it was not possible to melt the threads in as the material would crumble instead of melt when exposed to heat.
+So first things first, you will need to get hold of somebody who can 3D print the main body and the backplates of the keyboard. I decided to go with and online service,[JLCPCB](https://jlcpcb.com/3d-printing?from=Jesse), because i wanted to try out some fancy 3D print materials from SLA printing, however this was probably way overkill. A friend of mine who is was doing the build alongside with decided to have the print done with more tradtional PLA type print, and not only did this print go WAY faster it was also WAY cheaper. Even though the final quality of the SLA print is nicer, by a minor margin, i would probably not go with SLA print were i to do this again. It also turned out that the material itself posed some problems since it was not possible to melt the threads in as the material would crumble instead of melt when exposed to heat.
 
 All the 3D parts can be found in the STL folder, which contains the original dactyl-cc modified with holes for RJ9 connector (yes we are going to be using RJ9, not shitty 3mm audio cables), a hole for a USB-C connector and a wall mounted arduino-pro mircro case. (insert link to the thingyverse arduino mount). Also the backplate has been made thicker to meet JLCPCB print requirements.
 
@@ -51,7 +51,11 @@ It really helps to prepare the diodes with  cutting down the lengt of the side t
 
 Prepare these things before you start to solder.
 
-(insert image of hooking diodes and pieces of wiring)
+![wiring diagram](images/wire_soldering.jpg)
+
+Here is a better close up of how to hook the diodes both to the pin and to the other diodes, forming the rows.
+
+![wiring diagram](images/hooking_diodes.jpg)
 
 ## Wiring
 
@@ -62,6 +66,16 @@ I have created a, in my mind, more simple wiring diagram, which is shown below.
 ![wiring diagram](images/wiring_diagram_expanded.png)
 
 The wiring diagram shown is for the left side of the keybaord, but mirror it exactly the same for the right side. However please **beaware** that the wiring for the Arduinos is **not** the same, note that the columns for the right side is flipped compared to the left, the row placements are the same, but the columns pins are switched.
+
+## Briding the 2 halfs
+
+It's definetly worth mentioning that the wires in the RJ9 cable twists, that is, the black cable on one end is **not** going to be the black cable on the other end. The easiest way to check this is just to use a Multimeter with the continuity tester.
+
+You can also consolidate this diagram, but i would still check it if possible, just to make sure.
+
+![QMK tool, which looks like shit](images/rj9_wiring.jpg)
+
+We will only be using 3 of the 4 cables, i recommend using the left side as the reference (END 1) and choosing the yellow for data, red for voltage + and black for GND. Then use the appropriate colors on the other side as the diagram shows.
 
 ## qmk_flahser tool
 
